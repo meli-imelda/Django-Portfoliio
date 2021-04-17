@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'imelda',
 ]
 
 MIDDLEWARE = [
@@ -117,9 +120,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/' #define the url that django will use whenever you try to display a static file or an image from your website
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root/') # defines where all the  static files/media files are going to be saved
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static", #this is where all the static files are going to be defined
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
