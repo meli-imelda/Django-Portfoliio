@@ -9,7 +9,7 @@
 
 /* Colors */
 :root{
-    --first-color: #5361FF;
+    --first-color: #437F97;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
     --text-color: #697477;
@@ -197,6 +197,12 @@ img{
     color: var(--white-color);
     line-height: .8;
 }
+
+.home__subtitle {
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
 .home__title span{
     text-shadow: 0 20px 25px rgba(0,0,0,.5);
 }
@@ -228,8 +234,8 @@ img{
     padding-top: 1rem;
     width: 120px;
     height: 120px;
-    /* background-color: var(--first-color); */
-    /* border-radius: 100%; */
+    background-color: var(--first-color);
+    border-radius: 100%;
     overflow: hidden;
 }
 .about__img img{
