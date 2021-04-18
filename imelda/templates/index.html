@@ -87,15 +87,16 @@
 
                 <div class="skills__container bd-grid">
 
-                    {% for category in categories %}
-                    <h3 class="skills__subtitle">{{category.name}}</h3>
-                    {% for skills in category.skills_set.all %}
+                    <div class="skills__box">
+                        {% for category in categories %}
+                        <h3 class="skills__subtitle">{{category.name}}</h3>
+                            {% for skills in category.skills_set.all %}
                             
                                 <span class="skills__name">{{skills.skill_name}}</span>
                             {% endfor %}
                         {% endfor %}
-                        
                     </div>
+
                     <!-- <div class="skills__box">
                         <h3 class="skills__subtitle">Development</h3>
                         <span class="skills__name">Html</span>
@@ -104,10 +105,10 @@
                         <span class="skills__name">Javascript</span>
                         <span class="skills__name">ReactJs</span>
                         
-                        <!-- <h3 class="skills__subtitle">Design</h3>
+                        <h3 class="skills__subtitle">Design</h3>
                         <span class="skills__name">Figma</span>
                         <span class="skills__name">Adobe XD</span>
-                        <span class="skills__name">Photoshop</span> -->
+                        <span class="skills__name">Photoshop</span>
                     </div> -->
 
                     <div class="skills__img">
