@@ -1,0 +1,4 @@
+# A gitignore file is used to specify the files we 
+# do not want to push to GitHub
+# E.g Excluding our env folder
+env
